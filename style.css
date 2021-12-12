@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Code+Pro&display=swap');
+
+.cursor{
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-left: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+
+}
+h1{
+    font-family: 'Readex Pro';
+}
+.done{
+    color: #add7ff;
+}
+.failed{
+    color: #df4576;
+}
+.failed-space{
+    background-color: #d996ac;
+    margin: 2px;
+}
+body{
+    background-color: #171f2f;
+    color: #aae2da;
+    font-family: 'Source Code Pro';
+    font-size: 35px;
+    margin: 3rem;
+}
+.tp{
+    background-color: #212b42;
+    border-radius: 5px;
+    padding: 20px;
+
+}
+#typing{
+
+}
+/* :root {
+    --bg-color: #212b42;
+    --main-color: #add7ff;
+    --caret-color: #962f7e;
+    --sub-color: #5c7da5;
+    --text-color: #91b4d5;
+    --error-color: #df4576;
+    --error-extra-color: #d996ac;
+    --colorful-error-color: #df4576;
+    --colorful-error-extra-color: #d996ac;
+  }
+  
+  #top .logo .bottom {
+    color: #962f7e;
+  }
+   */
