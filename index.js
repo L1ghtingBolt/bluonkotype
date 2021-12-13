@@ -81,7 +81,7 @@ const startGame = () => {
       const wps = numberOfWords / seconds;
       const wpm = wps * 60.0;
       const acc = document.getElementsByClassName('failed').length * 100 / characters.length
-      document.getElementById("stats").innerText = `WordsPerMinute: ${parseInt(wpm)}\nAccuracy: ${100 - parseInt(acc)}%`;
+      document.getElementById("stats").innerText = `WordsPerMinute: ${parseInt(wpm)}\nAccuracy: ${100 - parseInt(acc)}%\nWordsPerSecond: ${parseFloat(wps).toFixed(2)}`;
       document.removeEventListener("keydown", keydown);
       setTimeout(reloadPage, 5000);
       return;

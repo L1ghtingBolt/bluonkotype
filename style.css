@@ -2,7 +2,7 @@
 
 .cursor{
     
-    background-color: #8c0038;
+    background-color: #e2b714;
     animation: blinker 1s linear infinite;
 }
 
@@ -13,42 +13,46 @@
 }
 h1{
     font-family: 'Readex Pro';
+    color:#e2b714;
+    font-size: px;
 }
 .done{
-    color: #199;
+    color: #d1d0c5;
 }
 .failed{
-    color: #df4576;
+    color: #ca4754;
 }
 .failed-space{
-    background-color: #d996ac;
+    background-color: #7e2a33;
     margin: 2px;
 }
 body{
-    background-color: #171f2f;
-    color: #aae2da;
+    background-color: #323437;
+    color: #646669;
     font-family: 'Source Code Pro';
-    font-size: 35px;
+    font-size: 30px;
     margin: 3rem;
 }
 .tp{
     border-radius: 5px;
-    text-align: center;
+    text-align: justify;
     padding: 20px;
     margin: 5rem auto;
     width:70rem;
 }
 
 /* :root {
-    --bg-color: #212b42;
-    --main-color: #add7ff;
-    --caret-color: #962f7e;
-    --sub-color: #5c7da5;
-    --text-color: #91b4d5;
-    --error-color: #df4576;
-    --error-extra-color: #d996ac;
-    --colorful-error-color: #df4576;
-    --colorful-error-extra-color: #d996ac;
+  --bg-color: #323437;
+  --main-color: #e2b714;
+  --caret-color: #e2b714;
+  --sub-color: #646669;
+  --text-color: #d1d0c5;
+  --error-color: #ca4754;
+  --error-extra-color: #7e2a33;
+  --colorful-error-color: #ca4754;
+  --colorful-error-extra-color: #7e2a33;
+}
+
   }
   
   #top .logo .bottom {
