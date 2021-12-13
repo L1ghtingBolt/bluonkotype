@@ -56,7 +56,7 @@ const startGame = () => {
         cursorCharacter = characters[++cursorIndex];  
     }
 
-    if (key == 'Backspace' && !cursorIndex <= 1){
+    if (key == 'Backspace' && cursorIndex >= 1){
         
         cursorCharacter.classList.remove("cursor");
         cursorCharacter = characters[--cursorIndex];
@@ -77,7 +77,7 @@ const startGame = () => {
       const wps = numberOfWords / seconds;
       const wpm = wps * 60.0;
       const acc = document.getElementsByClassName('failed').length * 100 / characters.length
-      document.getElementById("stats").innerText = `wpm: ${parseInt(wpm)}\naccuracy: ${100 - parseInt(acc)}%`;
+      document.getElementById("stats").innerText = `WordsPerMinute: ${parseInt(wpm)}\nAccuracy: ${100 - parseInt(acc)}%`;
       document.removeEventListener("keydown", keydown);
       setTimeout(reloadPage, 5000);
       return;

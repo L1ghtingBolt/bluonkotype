@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Code+Pro&display=swap');
 
 .cursor{
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-left: .15em solid orange; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    
+    background-color: #8c0038;
+    animation: blinker 1s linear infinite;
+}
 
+@keyframes blinker {
+  50% {
+    background-color: transparent;
+  }
 }
 h1{
     font-family: 'Readex Pro';
 }
 .done{
-    color: #add7ff;
+    color: #199;
 }
 .failed{
     color: #df4576;
@@ -28,14 +32,18 @@ body{
     margin: 3rem;
 }
 .tp{
-    background-color: #212b42;
     border-radius: 5px;
     padding: 20px;
+    margin: 5rem;
+    position: absolute;
+    width:90%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 
 }
-#typing{
 
-}
 /* :root {
     --bg-color: #212b42;
     --main-color: #add7ff;
