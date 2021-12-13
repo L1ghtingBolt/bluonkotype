@@ -56,7 +56,7 @@ const startGame = () => {
         cursorCharacter = characters[++cursorIndex];  
     }
 
-    if (key == 'Backspace' && !cursorIndex >= 1){
+    if (key == 'Backspace' && !cursorIndex <= 1){
         
         cursorCharacter.classList.remove("cursor");
         cursorCharacter = characters[--cursorIndex];
