@@ -37,14 +37,15 @@ const startGame = () => {
   let startTime = null;
 
   const keydown = ({ key }) => {
-    if (!startTime) {
-      startTime = new Date();
-    }
+    
 
     if (key === cursorCharacter.innerText) {
       cursorCharacter.classList.remove("cursor");
       cursorCharacter.classList.add("done");
       cursorCharacter = characters[++cursorIndex];
+      if (!startTime) {
+        startTime = new Date();
+      }
     }
 
     else if (key != cursorCharacter.innerText && key != 'Backspace' && key != 'Shift'){
@@ -54,6 +55,9 @@ const startGame = () => {
         else
         cursorCharacter.classList.add("failed");
         cursorCharacter = characters[++cursorIndex];  
+        if (!startTime) {
+          startTime = new Date();
+        }
     }
 
     if (key == 'Backspace' && cursorIndex >= 1){
