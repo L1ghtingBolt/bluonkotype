@@ -33,14 +33,10 @@ body{
 }
 .tp{
     border-radius: 5px;
+    text-align: center;
     padding: 20px;
-    margin: 5rem;
-    position: absolute;
-    width:90%;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+    margin: 5rem auto;
+    width:70rem;
 
 }
 
