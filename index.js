@@ -1,26 +1,16 @@
 const typingDiv = document.getElementById("typing");
 const statsDiv = document.getElementById("stats");
 
-var json;
-function getQuote() {
-    fetch('https://api.quotable.io/random')
-      .then((res) => res.json())
-      .then((data) => {
-          json = data;
-        return data.content;
-      });
-  }
-
-getQuote();
-
-function reloadPage(){
-    location.reload();
-}
-
-const startGame = () => {
+document.getElementById('themes').addEventListener('change', (event) => { 
+  var css = document.getElementById('css');
+  css.setAttribute('href', (event.target.value + '.css')) 
+});
+async function startGame (){
+  const response = await fetch('https://api.quotable.io/random');
+  const json = await response.json();
   typingDiv.innerHTML = "";
   statsDiv.innerHTML = "";
-
+  
   const text = json.content;
 
   const characters = text.split("").map((char) => {
@@ -48,7 +38,7 @@ const startGame = () => {
       }
     }
 
-    else if (key != cursorCharacter.innerText && key != 'Backspace' && key != 'Shift'){
+    else if (key != cursorCharacter.innerText && key != 'Backspace' && key != 'Shift' && key != 'Escape'){
         cursorCharacter.classList.remove("cursor");
         if(cursorCharacter.innerText == ' ')
         cursorCharacter.classList.add("failed-space");
@@ -71,7 +61,10 @@ const startGame = () => {
         cursorCharacter.classList.add("cursor");
         
     }
-
+    if (key == 'Escape' && cursorIndex >= 1){
+      startGame();
+      
+  }
     if (cursorIndex >= characters.length) {
       // game ended
       const endTime = new Date();
@@ -83,7 +76,7 @@ const startGame = () => {
       const acc = document.getElementsByClassName('failed').length * 100 / characters.length
       document.getElementById("stats").innerText = `WordsPerMinute: ${parseInt(wpm)}\nAccuracy: ${100 - parseInt(acc)}%\nWordsPerSecond: ${parseFloat(wps).toFixed(2)}`;
       document.removeEventListener("keydown", keydown);
-      setTimeout(reloadPage, 5000);
+      setTimeout(startGame, 5000);
       return;
     }
 
@@ -92,4 +85,4 @@ const startGame = () => {
   
   document.addEventListener("keydown", keydown);
 };
-setTimeout(startGame, 1500);
+startGame();

@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Code+Pro&display=swap');
 
 .cursor{
-    
-    background-color: #e2b714;
     animation: blinker 1s linear infinite;
 }
 
@@ -13,35 +11,30 @@
 }
 h1{
     font-family: 'Readex Pro';
-    color:#e2b714;
     font-size: px;
 }
-.done{
-    color: #d1d0c5;
-}
-.failed{
-    color: #ca4754;
-}
-.failed-space{
-    background-color: #7e2a33;
-    margin: 2px;
-}
+
 body{
-    background-color: #323437;
-    color: #646669;
     font-family: 'Source Code Pro';
     font-size: 30px;
     margin: 3rem;
+    align-content: center;
+    align-items: center;
 }
 .tp{
     border-radius: 5px;
     text-align: justify;
     padding: 20px;
-    margin: 5rem auto;
-    width:70rem;
+   margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 /* :root {
+  :root {
   --bg-color: #323437;
   --main-color: #e2b714;
   --caret-color: #e2b714;
@@ -53,9 +46,14 @@ body{
   --colorful-error-extra-color: #7e2a33;
 }
 
-  }
-  
-  #top .logo .bottom {
-    color: #962f7e;
-  }
+}
+
+#menu .icon-button {
+  color: #f2ce83;
+}
+
+#menu .icon-button:hover {
+  color: #c6915e;
+}
+
    */

@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Code+Pro&display=swap');
+
+.cursor{
+  background-color:#fbdb8c;
+}
+h1{
+    color:#f2ce83;
+}
+.done{
+    color: #ffffff;
+}
+.failed{
+    color: #c6915e;
+}
+.failed-space{
+    background-color: #c6915e;
+}
+body{
+    background-color: #241963;
+    color:#f2ce83;
+}
+.tp{
+    color: #446ad5;
+}
+ 
