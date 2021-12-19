@@ -1,25 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@500&family=Source+Code+Pro&display=swap');
-
-.cursor{
-  background-color:#fbdb8c;
-}
-h1{
-    color:#f2ce83;
-}
-.done{
-    color: #ffffff;
-}
-.failed{
-    color: #c6915e;
-}
-.failed-space{
-    background-color: #c6915e;
-}
 body{
+    background-color: #4635a8;
+    color:white;
+}
+h1, h3, .wrapper, .stats, button,.success{
+    color: #f2ce83;
+}
+
+.container{
     background-color: #241963;
-    color:#f2ce83;
 }
-.tp{
-    color: #446ad5;
+textarea, button, #themes, #themes:hover,
+#themes:focus{
+    background: #302280;
+    color:white;
 }
- 
+
+.fail{
+    color: crimson;
+}
+.fail-space{
+    background-color: rgba(220, 20, 60, 0.246);
+    
+} 

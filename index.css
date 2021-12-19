@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', Arial;
+    text-shadow: 4px 3px 3px #00000041;
+}
+.container{
+    width: 80vmin;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px #00000025;
+}
+.stats{
+    font-size: 1.4rem;
+    text-shadow: 4px 3px 0 #00000041;
+    text-align: right;
+    margin-bottom: 2.8rem;
+    
+}
+.stats span{
+    font-weight: 700;
+}
+#words{
+    font-size: 22px;
+    text-align: justify;
+    margin: 50px 0 30px 0
+}
+textarea{
+    resize: none;
+    width: 100%;
+    border-radius: 5px;
+    padding:10px;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
+    box-shadow: 0 20px 40px #0000001f;
+
+}
+button{
+    float:right;
+    margin-top:20px;
+    font-weight: 700;
+    color:white;
+    border: none;
+    padding:10px 30px;
+    border-radius: 5px;
+    font-size:20px;
+    box-shadow: 0 20px 40px #00000025;
+
+}
+
+.result{
+    margin-top: 40px;
+    font-size: 25px;
+    text-shadow: 4px 3px 0 #00000041;
+
+}
+
+.result h3{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 25px;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-around;
+}
+.wrapper span{
+    font-weight: 600;
+}
+
+
+.fail-space{
+    margin: 0 2.2px;
+}
+
+#themes{
+        font-weight: 700;
+        cursor: pointer;
+        padding: 10px 15px;
+        outline: 0;
+        border: 0px solid #000000;
+        box-shadow: 4px 3px 3px #00000041;
+        border-radius: 4px;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        margin:20px;
+    }
+        .themes select::-ms-expand {
+            display: none;
+        }
+        .themes select:disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
