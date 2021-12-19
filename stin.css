@@ -2,10 +2,12 @@ body{
     background-color: #4635a8;
     color:white;
 }
-h1, h3, .wrapper, .stats, button,.success{
+h3, .wrapper, .stats, button,.success{
     color: #f2ce83;
 }
-
+h1{
+    color:#ffc800;
+}
 .container{
     background-color: #241963;
 }
