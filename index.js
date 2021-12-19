@@ -5,7 +5,16 @@ document.getElementById('themes').addEventListener('change', (event) => {
   var css = document.getElementById('css');
   css.setAttribute('href', (event.target.value + '.css')) 
 });
+
+$(document).on(
+  'keydown', function(event) {
+    if (event.key == "Escape") {
+        startGame();
+    }
+});
+
 async function startGame (){
+
   const response = await fetch('https://api.quotable.io/random');
   const json = await response.json();
   typingDiv.innerHTML = "";
@@ -61,10 +70,6 @@ async function startGame (){
         cursorCharacter.classList.add("cursor");
         
     }
-    if (key == 'Escape' && cursorIndex >= 1){
-      startGame();
-      
-  }
     if (cursorIndex >= characters.length) {
       // game ended
       const endTime = new Date();
@@ -73,10 +78,9 @@ async function startGame (){
       const numberOfWords = text.split(" ").length;
       const wps = numberOfWords / seconds;
       const wpm = wps * 60.0;
-      const acc = document.getElementsByClassName('failed').length * 100 / characters.length
-      document.getElementById("stats").innerText = `WordsPerMinute: ${parseInt(wpm)}\nAccuracy: ${100 - parseInt(acc)}%\nWordsPerSecond: ${parseFloat(wps).toFixed(2)}`;
+      const acc = $('.done').length * 100 / characters.length
+      $("#stats").append( `WordsPerMinute: ${parseInt(wpm)}<br>Accuracy: ${parseInt(acc)}%<br>WordsPerSecond: ${parseFloat(wps).toFixed(2)}`);
       document.removeEventListener("keydown", keydown);
-      setTimeout(startGame, 5000);
       return;
     }
 
