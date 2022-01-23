@@ -18,8 +18,9 @@
         <div id="words" onmousedown="return false" onselectstart="return false">
         </div>
         <textarea placeholder="Type here" id="wordinput" rows="3"></textarea>
-        <button id="start-test" onclick='startTest()'> Start Test</button>
-        <button id="stop-test" onclick='displayResults()'> Stop Test</button>
+        <div id="btns">
+            <button id="start-test" onclick='startTest()'> Start Test</button>
+            <button id="stop-test" onclick='displayResults()'> Stop Test</button></div>
         <div class="result">
             <h3>Results:</h3>
             <div class="wrapper">
@@ -27,10 +28,13 @@
                 <p>Speed: <span id="wpm"></span></p>
             </div>
         </div>
-        <label for="themes">Theme:</label> <select  name="themes" id="themes">
-            <option value="sdark">Serika Dark</option>
-            <option value="stin">Sewing Tin</option>
-          </select>
+        <div class="themecontainer">
+            <label for="themes">Theme:</label> 
+            <select  name="themes" id="themes">
+                <option value="sdark">Serika Dark</option>
+                <option value="stin">Sewing Tin</option>
+            </select>
+        </div>
     </div>
     <script src="index.js"></script>
     

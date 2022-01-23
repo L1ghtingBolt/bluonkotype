@@ -4,7 +4,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Inconsolata', Arial;
-    text-shadow: 4px 3px 3px #00000041;
 }
 
 .container, button, textarea, #themes{
@@ -23,7 +22,6 @@
 }
 .stats{
     font-size: 1.4rem;
-    text-shadow: 4px 3px 0 #00000041;
     text-align: right;
     margin-bottom: 2.8rem;
     
@@ -42,34 +40,39 @@ textarea{
     border-radius: 5px;
     padding:10px;
     font-size: 20px;
-    border: none;
+    border: 1px solid #777;
     background-color: transparent;
     resize: none;
     outline: none;
-
 }
 button{
-    float:right;
     margin-top:20px;
     font-weight: 700;
     color:white;
     border: none;
     padding:10px 30px;
-    border-radius: 5px;
+    border-radius: 2px;
     font-size:20px;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+}
 
+#btns {
+    display: flex;
+    align-content: space-around;
 }
 
 .result{
     margin-top: 40px;
+    display: none;
     font-size: 25px;
-    text-shadow: 4px 3px 0 #00000041;
-
 }
 
 .result h3{
     text-align: center;
     margin-bottom: 20px;
+    display: block;
     font-weight: 700;
     font-size: 25px;
 }
@@ -93,21 +96,21 @@ button{
         padding: 10px 15px;
         outline: 0;
         border: 0px solid #000000;
-        border-radius: 4px;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        margin:20px;
+        border-radius: 2px;
     }
-        .themes select::-ms-expand {
-            display: none;
-        }
-        .themes select:disabled {
-            opacity: 0.5;
-            pointer-events: none;
-        }
 h1{
     font-size: 3.5rem;
-    text-shadow: 4px 3px 3px #00000088;
+}
 
+label {
+    align-self: center;
+    margin-right: 20px;
+}
+
+
+.themecontainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 20px;
 }
